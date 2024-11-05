@@ -1,0 +1,26 @@
+# External Services
+server:
+    port: ${SERVER_PORT:8084}
+
+spring:
+    application:
+        name: vg-ms-competencies
+    data:
+        mongodb:
+            uri: mongodb+srv://amirarbieto:n1230IGFtm6682Kj@artemiosolutions.pripjnm.mongodb.net/artemiosolutions?retryWrites=true&w=majority
+
+# Empoit de actuator
+api:
+    version: api/v1
+
+# Swagger
+springdoc:
+    swagger-ui:
+        path: /swagger-ui.html
+    api-docs:
+        path: /api/competencies
+
+# External services
+services:
+    didactic-unit:
+        url: ${DIDACTIC_UNIT_SERVICE_URL:https://vg-ms-didactic-unit-production.up.railway.app/common/api/v1/didactic-unit}
